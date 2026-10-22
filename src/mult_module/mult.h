@@ -34,9 +34,9 @@ static_assert(MAX_DIGITS <= MAX_SAFE_DIGITS, "MAX_DIGITS exceeds uint32_t carry-
 
 // out must be (first_length + second_length) * uint32_t size
 // returns number of digits of the product, with trimmed leading zeroes
-size_t multiply_arrays(const uint8_t *restrict first, size_t first_length,
-                       const uint8_t *restrict second, size_t second_length,
-                       uint32_t *restrict out);
+size_t multiply_arrays(const uint8_t* restrict first, size_t first_length,
+                        const uint8_t* restrict second, size_t second_length,
+                        uint32_t* restrict out);
 
 // This implementation also includes a read_operand() function that takes properly
 // formatted user input and stores it into a forwarded uint8_t array, if appropriately sized.
