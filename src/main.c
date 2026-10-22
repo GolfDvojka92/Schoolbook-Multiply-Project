@@ -57,7 +57,7 @@ int main(void)
     printf("Result: ");
     for (size_t i = 0; i < len_result; i++)
     {
-        printf("%"PRId32"", result[len_result - 1 - i]);
+        printf("%"PRIu32"", result[len_result - 1 - i]);
     }
     printf("\n");
     return 0;
