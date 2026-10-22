@@ -1,3 +1,25 @@
+/********************************************************************************
+ *                  Schoolbook multiplicatiton assignment                       *
+ *                                                                              *
+ *  - The assignment asks for a function that takes two very large              *
+ *  operands represented as arrays of their base-10 digits, and returns         *
+ *  their product. Representation of the product wasn't specified, so I         *
+ *  assumed it to be represented in the same way its operands are, so in        *
+ *  the implementation the result is returned via user-allocated out            *
+ *  param.                                                                      *
+ *  - The algorithmic solution I chose is schoolbook multiplicatiton            *
+ *  algorithm for the sake of simplicity in implementation and understanding,   *
+ *  whilst keeping decent performance on virtually all machines. Memory         *
+ *  constraints weren't clearly defined, so I took the liberty of making        *
+ *  operand arrays as small as possible, and the result array wide enough to    *
+ *  stay within safe limits of this implementation, while still accounting for  *
+ *  performance where it was possible.                                          *
+ *  - Testing was done via standard input though this main application, and     *
+ *  the cases were chosen to test accuracy and constraints accordingly          *
+ *                                                                              *
+ *  Aljosa Spika                                                                *
+ *  RA55/2023                                                                   *
+ ********************************************************************************/
 #include "mult_module/mult.h"
 
 #define STR_(x) #x
@@ -35,7 +57,7 @@ int main(void)
     printf("Result: ");
     for (size_t i = 0; i < len_result; i++)
     {
-        printf("%d", result[len_result - 1 - i]);
+        printf("%"PRId32"", result[len_result - 1 - i]);
     }
     printf("\n");
     return 0;
